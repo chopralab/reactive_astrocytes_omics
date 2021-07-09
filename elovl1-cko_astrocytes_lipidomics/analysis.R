@@ -7,13 +7,8 @@ experiment_1_names <- c("c1", "c2", "c3",
                         "R1", "R2", "R3",
                         "blank")
 
-# experiment_2_names <- c("Control1", "Control2", "Control3", "Control4",
-#                         "RAC1", "RAC2", "RAC3", "RAC4",
-#                         "blank")
 
 lipid_types <- c("FFA" = "FFA", "PC" = "PC")
-
-# metob_types <- c("NEG1" = "NEG1", "NEG2" = "NEG2", "POS1" = "POS1", "POS2" = "POS2")
 
 read_lipids <- function(prefix, marker, exp_names, types, add_blank = NULL) {
   lapply(names(types), function(type){
@@ -71,18 +66,6 @@ contrasts_expr_1 = makeContrasts(
   levels = design_expr_1
 )
 
-# # Groups for experiment 2
-# gr_expr_2 = c("C", "C", "C", "C",
-#               "R", "R", "R", "R",
-#               "Blank") %>%
-#   factor(levels = c("Blank", "C", "R"))
-# 
-# design_expr_2 = model.matrix(~gr_expr_2)
-# 
-# contrasts_expr_2 = makeContrasts(
-#   H = gr_expr_2R - gr_expr_2C,
-#   levels = design_expr_2
-# )
 
 perform_analysis_raw <- function(counts, design_mat, gr) {
   
@@ -125,59 +108,10 @@ ml_e1_tbl <-
   # select(-blank_solvent) %>%
   experiment_1_helper
 
-# cm_e1_tbl <-
-#   cells_metab_expr_1 %>%
-#   experiment_1_helper
-# 
-# mm_e1_tbl <-
-#   media_metab_expr_1 %>%
-#   # select(-solvent_blank_media) %>%
-#   experiment_1_helper
 
 cl_e1_tbl
 
 ml_e1_tbl
-
-# cm_e1_tbl
-# 
-# mm_e1_tbl
-
-# experiment_2_helper <- function(df) {
-#   df %>%
-#     perform_analysis_raw(design_expr_2, gr_expr_2) %>%
-#     calculate_significance(contrasts_expr_2) %>%
-#     topTags(1500000) %>%
-#     as.data.frame() %>%
-#     rownames_to_column("lipid") %>%
-#     as_tibble()
-#   
-# }
-# 
-# cl_e2_tbl <-
-#   cells_lipid_expr_2 %>%
-#   experiment_2_helper
-# 
-# ml_e2_tbl <-
-#   media_lipid_expr_2 %>%
-#   select(-blank_solvent) %>%
-#   experiment_2_helper
-# 
-# cm_e2_tbl <-
-#   cells_metab_expr_2 %>%
-#   experiment_2_helper
-# 
-# mm_e2_tbl <-
-#   media_metab_expr_2 %>%
-#   select(-solvent_blank_media) %>%
-#   experiment_2_helper
-# 
-# cl_e2_tbl
-# 
-# ml_e2_tbl
-# 
-# cm_e2_tbl
-# 
-# mm_e2_tbl
 
 make_volcano_plot <- function(df, title) {
   df %>%
@@ -192,18 +126,6 @@ make_volcano_plot <- function(df, title) {
 cl_e1_tbl %>% make_volcano_plot("Cells Lipids Experiment 1")
 
 ml_e1_tbl %>% make_volcano_plot("Media Lipids Experiment 1")
-
-# cm_e1_tbl %>% make_volcano_plot("Cells Metabolites Experiment 1")
-# 
-# mm_e1_tbl %>% make_volcano_plot("Media Metabolites Experiments 1")
-
-# cl_e2_tbl %>% make_volcano_plot("Cells Lipids Experiment 2")
-# 
-# ml_e2_tbl %>% make_volcano_plot("Media Lipids Experiment 2")
-# 
-# cm_e2_tbl %>% make_volcano_plot("Cells Metabolites Experiment 2")
-# 
-# mm_e2_tbl %>% make_volcano_plot("Media Metabolites Experiments 2")
 
 
 write_summary_and_results <- function(tbl, df, name) {
@@ -226,14 +148,6 @@ dir.create("results", F)
 
 cl_e1_tbl %>% write_summary_and_results(cells_lipid_expr_1, "cl_e1")
 ml_e1_tbl %>% write_summary_and_results(media_lipid_expr_1, "ml_e1")
-# cm_e1_tbl %>% write_summary_and_results(cells_metab_expr_1, "cm_e1")
-# mm_e1_tbl %>% write_summary_and_results(media_metab_expr_1, "mm_e1")
-
-# cl_e2_tbl %>% write_summary_and_results(cells_lipid_expr_2, "cl_e2")
-# ml_e2_tbl %>% write_summary_and_results(media_lipid_expr_2, "ml_e2")
-# cm_e2_tbl %>% write_summary_and_results(cells_metab_expr_2, "cm_e2")
-# mm_e2_tbl %>% write_summary_and_results(media_metab_expr_2, "mm_e2")
-
 
 source("ggbiplot.R")
 
@@ -305,24 +219,6 @@ cells_lipid_expr_1 %>%
 
 media_lipid_expr_1 %>% #select(-blank_solvent) %>%
   make_pca_plot(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Lipids in Experiment 1")
-# 
-# cells_metab_expr_1 %>%
-#   make_pca_plot(design_expr_1, gr_expr_1, contrasts_expr_1, "Cells Metabolites in Experiment 1")
-# 
-# media_metab_expr_1 %>% select(-solvent_blank_media) %>%
-#   make_pca_plot(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Metabolites in Experiment 1")
-
-# cells_lipid_expr_2 %>%
-#   make_pca_plot(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Lipids in Experiment 2")
-# 
-# media_lipid_expr_2 %>% select(-blank_solvent) %>%
-#   make_pca_plot(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Lipids in Experiment 2")
-# 
-# cells_metab_expr_2 %>%
-#   make_pca_plot(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Metabolites in Experiment 2")
-# 
-# media_metab_expr_2 %>% select(-solvent_blank_media) %>%
-#   make_pca_plot(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Metabolites in Experiment 2")
 
 #heatmaps
 
@@ -359,27 +255,6 @@ cells_lipid_expr_1 %>%
 
 media_lipid_expr_1 %>% #select(-blank_solvent) %>%
   make_heatmap(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Lipids in Experiment 1")
-
-# cells_metab_expr_1 %>%
-#   make_heatmap(design_expr_1, gr_expr_1, contrasts_expr_1, "Cells Metabolites in Experiment 1")
-# 
-# 
-# media_metab_expr_1 %>% select(-solvent_blank_media) %>%
-#   make_heatmap(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Metabolites in Experiment 1")
-
-
-# cells_lipid_expr_2 %>%
-#   make_heatmap(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Lipids in Experiment 2")
-# 
-# media_lipid_expr_2 %>% select(-blank_solvent) %>%
-#   make_heatmap(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Lipids in Experiment 2")
-# 
-# cells_metab_expr_2 %>%
-#   make_heatmap(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Metabolites in Experiment 2")
-# 
-# media_metab_expr_2 %>% select(-solvent_blank_media) %>%
-#   make_heatmap(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Metabolites in Experiment 2")
-
 
 
 make_heatmap_jf_e1 <- function(tp, design_mat, gr, contrasts, title = "Heat-map", FDR = 0.10) {
@@ -421,57 +296,6 @@ cells_lipid_expr_1 %>%
 media_lipid_expr_1 %>% select(-blank_solvent) %>%
   make_heatmap_jf_e1(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Lipids in Experiment 1", 0.001)
 
-# cells_metab_expr_1 %>%
-#   make_heatmap_jf_e1(design_expr_1, gr_expr_1, contrasts_expr_1, "Cells Metabolites in Experiment 1", 0.001)
-# 
-# media_metab_expr_1 %>% select(-solvent_blank_media) %>%
-#   make_heatmap_jf_e1(design_expr_1, gr_expr_1, contrasts_expr_1, "Media Metabolites in Experiment 1", 0.001)
-
-# make_heatmap_jf_e2 <- function(tp, design_mat, gr, contrasts, title = "Heat-map", FDR = 0.10) {
-#   
-#   DElist <-
-#     tp %>%
-#     get_DE_lipids(design_mat, gr, contrasts, FDR)
-#   
-#   if(length(DElist) == 0) {
-#     cat("No significant lipids for ", title)
-#     return()
-#   }
-#   
-#   if(length(DElist) == 1) {
-#     cat("Single significant lipids for ", title, " is ", DElist[1])
-#     return()
-#   }
-#   
-#   tp %>%
-#     mutate(lipid = make.unique(lipid)) %>%
-#     filter(lipid %in% DElist) %>%
-#     select(-Transition, -type) %>%
-#     rowwise() %>%
-#     mutate(mean = mean(c(Control1, Control2, Control3, Control4,
-#                          RAC1, RAC2, RAC3, RAC4))) %>%
-#     mutate_if(is.numeric, log2) %>%
-#     mutate_if(is.numeric, list(~ . - mean)) %>%
-#     select(-blank, -mean) ->
-#     vals
-#   
-#   vals %>%
-#     column_to_rownames("lipid") %>%
-#     as.matrix() %>%
-#     pheatmap::pheatmap(main = title)
-# }
-# 
-# cells_lipid_expr_2 %>%
-#   make_heatmap_jf_e2(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Lipids in Experiment 2", 0.001)
-# 
-# media_lipid_expr_2 %>% select(-blank_solvent) %>%
-#   make_heatmap_jf_e2(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Lipids in Experiment 2", 0.001)
-# 
-# cells_metab_expr_2 %>%
-#   make_heatmap_jf_e2(design_expr_2, gr_expr_2, contrasts_expr_2, "Cells Metabolites in Experiment 2", 0.001)
-# 
-# media_metab_expr_2 %>% select(-solvent_blank_media) %>%
-#   make_heatmap_jf_e2(design_expr_2, gr_expr_2, contrasts_expr_2, "Media Metabolites in Experiment 2", 0.001)
 
 write_summary_and_results_combined_pp <- function(tbl1, tbl2, df1, df2, name, p.value = 0.1) {
   
