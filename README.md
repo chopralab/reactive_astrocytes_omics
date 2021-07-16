@@ -10,7 +10,7 @@ http://massive.ucsd.edu/ProteoSAFe/status.jsp?task=ca311727ff524e32868736d3d1b3c
 * Total Size:3.10 GB
 * Subscribers:1
 
-## Raw Lipidomics Data Availability
+## Raw Proteomics Data Availability
 https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=5f39b6cde74c4911951dbef1f2dac443
 * MassIVE MSV000087805
 * Number of Files:6,304
