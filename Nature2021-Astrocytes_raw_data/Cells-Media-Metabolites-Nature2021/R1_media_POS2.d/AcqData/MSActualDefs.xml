@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by Nora Gee (Agilent) -->
+<ActualsDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MSActualDefs.xsd">
+	<Version>1</Version>
+	<Actuals Type="0">
+		<Actual ActualID="19">
+			<DisplayName>Rough Vac</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>1</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>2</DisplayDigits>
+			<Unit>Torr</Unit>
+			<Category>General</Category>
+		</Actual>
+		<Actual ActualID="20">
+			<DisplayName>High Vac</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>1</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>2</DisplayDigits>
+			<Unit>Torr</Unit>
+			<Category>General</Category>
+		</Actual>
+		<Actual ActualID="21">
+			<DisplayName>Turbo1 Speed</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>1</DisplayDigits>
+			<Unit>%</Unit>
+			<Category>General</Category>
+		</Actual>
+		<Actual ActualID="33">
+			<DisplayName>Pump1 Current</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>3</DisplayDigits>
+			<Unit>A</Unit>
+			<Category>General</Category>
+		</Actual>
+    <Actual ActualID="22">
+      <DisplayName>Turbo2 Speed</DisplayName>
+      <DataType>5</DataType>
+      <DisplayFormat>0</DisplayFormat>
+      <DisplayEffects>0</DisplayEffects>
+      <DisplayDigits>1</DisplayDigits>
+      <Unit>%</Unit>
+      <Category>General</Category>
+    </Actual>
+    <Actual ActualID="34">
+      <DisplayName>Pump2 Current</DisplayName>
+      <DataType>5</DataType>
+      <DisplayFormat>0</DisplayFormat>
+      <DisplayEffects>0</DisplayEffects>
+      <DisplayDigits>3</DisplayDigits>
+      <Unit>A</Unit>
+      <Category>General</Category>
+    </Actual>
+    <Actual ActualID="3">
+			<DisplayName>MS1 Heater</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>°C</Unit>
+			<Category>MS1</Category>
+		</Actual>
+		<Actual ActualID="4">
+			<DisplayName>MS2 Heater</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>°C</Unit>
+			<Category>MS2</Category>
+		</Actual>
+		<Actual ActualID="2">
+			<DisplayName>Gas Temp</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>°C</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="6">
+			<DisplayName>Gas Flow</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>1</DisplayDigits>
+			<Unit>l/min</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="5">
+			<DisplayName>Nebulizer</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>1</DisplayDigits>
+			<Unit>psi</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="7">
+			<DisplayName>Capillary</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>V</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="9">
+			<DisplayName>Chamber Current</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>2</DisplayDigits>
+			<Unit>µA</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="10">
+			<DisplayName>Capillary Current</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>nA</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="8">
+			<DisplayName>Corona Voltage</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>V</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+		<Actual ActualID="1">
+			<DisplayName>Vaporizer</DisplayName>
+			<DataType>5</DataType>
+			<DisplayFormat>0</DisplayFormat>
+			<DisplayEffects>0</DisplayEffects>
+			<DisplayDigits>0</DisplayDigits>
+			<Unit>°C</Unit>
+			<Category>Ion Source</Category>
+		</Actual>
+    <Actual ActualID="40">
+      <DisplayName>Sheath Gas Temp</DisplayName>
+      <DataType>5</DataType>
+      <DisplayFormat>0</DisplayFormat>
+      <DisplayEffects>0</DisplayEffects>
+      <DisplayDigits>0</DisplayDigits>
+      <Unit>°C</Unit>
+      <Category>Ion Source</Category>
+    </Actual>
+    <Actual ActualID="41">
+      <DisplayName>Sheath Gas Flow</DisplayName>
+      <DataType>5</DataType>
+      <DisplayFormat>0</DisplayFormat>
+      <DisplayEffects>0</DisplayEffects>
+      <DisplayDigits>1</DisplayDigits>
+      <Unit>l/min</Unit>
+      <Category>Ion Source</Category>
+    </Actual>
+  </Actuals>
+</ActualsDef>
