@@ -1,0 +1,70 @@
+<PumpMethod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ModuleType="G1376A" schemaVersion="1.0.5" schemaSI="1" ModuleOptions="">
+  <ConfigurationXml>&lt;PumpConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaVersion="1.0.3"&gt;&lt;DisplayName&gt;Cap Pump&lt;/DisplayName&gt;&lt;SerialNumber&gt;DE43601376&lt;/SerialNumber&gt;&lt;ModuleType&gt;G1376A&lt;/ModuleType&gt;&lt;ModuleDisplayType&gt;G1376A&lt;/ModuleDisplayType&gt;&lt;ConnectionInfo&gt;&lt;ConnectionType&gt;ConnectionType_IPAddress&lt;/ConnectionType&gt;&lt;IPAddress&gt;192.168.254.11&lt;/IPAddress&gt;&lt;/ConnectionInfo&gt;&lt;FirmwareRevision&gt;A.06.11 [005]&lt;/FirmwareRevision&gt;&lt;IsExternalContactsBoardInstalled&gt;false&lt;/IsExternalContactsBoardInstalled&gt;&lt;IsSealWashInstalled&gt;false&lt;/IsSealWashInstalled&gt;&lt;IsSolventSelectionValveInstalled&gt;true&lt;/IsSolventSelectionValveInstalled&gt;&lt;IsFlowSensorInstalled&gt;true&lt;/IsFlowSensorInstalled&gt;&lt;FlowSensorVersion&gt;FS1_20microl&lt;/FlowSensorVersion&gt;&lt;PressureUnit&gt;Unit_Bar&lt;/PressureUnit&gt;&lt;MixerVolume&gt;0.42&lt;/MixerVolume&gt;&lt;FilterVolume&gt;0.102&lt;/FilterVolume&gt;&lt;LinkedSampler&gt;&lt;ModuleType /&gt;&lt;SerialNumber /&gt;&lt;/LinkedSampler&gt;&lt;FastCompositionChange&gt;&lt;FastCompositionChangeEnabled&gt;false&lt;/FastCompositionChangeEnabled&gt;&lt;FlushTime&gt;1&lt;/FlushTime&gt;&lt;CondTime&gt;3&lt;/CondTime&gt;&lt;/FastCompositionChange&gt;&lt;/PumpConfig&gt;</ConfigurationXml>
+  <Timetable />
+  <StopTime>
+    <StopTimeMode>StopTime_Set</StopTimeMode>
+    <StopTimeValue>2</StopTimeValue>
+  </StopTime>
+  <PostTime>
+    <PostTimeMode>PostTime_Off</PostTimeMode>
+  </PostTime>
+  <Flow>0.007</Flow>
+  <UseSolventTypes>false</UseSolventTypes>
+  <StrokeA>
+    <AutomaticStrokeCalculation>true</AutomaticStrokeCalculation>
+  </StrokeA>
+  <StrokeB>
+    <AutomaticStrokeCalculation>true</AutomaticStrokeCalculation>
+  </StrokeB>
+  <CompressA>
+    <CompressibilityMode>CompressibilityValueSet</CompressibilityMode>
+    <CompressibilityValueSet>115</CompressibilityValueSet>
+  </CompressA>
+  <CompressB>
+    <CompressibilityMode>CompressibilityValueSet</CompressibilityMode>
+    <CompressibilityValueSet>115</CompressibilityValueSet>
+  </CompressB>
+  <SolventComposition>
+    <SolventElement>
+      <Channel>Channel_A</Channel>
+      <Channel1UserName />
+      <Channel2UserName>ACN 0.1% FA</Channel2UserName>
+      <SelectedSolventChannel>Channel2</SelectedSolventChannel>
+      <Used>true</Used>
+      <Percentage>100</Percentage>
+    </SolventElement>
+    <SolventElement>
+      <Channel>Channel_B</Channel>
+      <Channel1UserName />
+      <Channel2UserName />
+      <SelectedSolventChannel>Channel2</SelectedSolventChannel>
+      <Used>false</Used>
+      <Percentage>0</Percentage>
+    </SolventElement>
+  </SolventComposition>
+  <LowPressureLimit>0</LowPressureLimit>
+  <HighPressureLimit>400</HighPressureLimit>
+  <MaximumFlowRamp>100</MaximumFlowRamp>
+  <OperationMode>Micro_Mode</OperationMode>
+  <ColumnFlowReadyCondition>
+    <ColumnFlowReadyConditionMode>Always_Ready</ColumnFlowReadyConditionMode>
+  </ColumnFlowReadyCondition>
+  <PrimaryFlowRate>0.2</PrimaryFlowRate>
+  <FastCompositionChange>FastCompositionChange_Off</FastCompositionChange>
+  <FlowSensorSolventCalibration>
+    <FlowSensorSolventCalibrationID>-3</FlowSensorSolventCalibrationID>
+    <FlowSensorSolventCalibrationName>H2O-ACN</FlowSensorSolventCalibrationName>
+    <FlowSensorSolventCalibrationDescription>A:Aqueous  B:Acetonitrile</FlowSensorSolventCalibrationDescription>
+    <CorrectionValue_0_Percent>1</CorrectionValue_0_Percent>
+    <CorrectionValue_10_Percent>0.981</CorrectionValue_10_Percent>
+    <CorrectionValue_20_Percent>0.947</CorrectionValue_20_Percent>
+    <CorrectionValue_30_Percent>0.9</CorrectionValue_30_Percent>
+    <CorrectionValue_40_Percent>0.852</CorrectionValue_40_Percent>
+    <CorrectionValue_50_Percent>0.796</CorrectionValue_50_Percent>
+    <CorrectionValue_60_Percent>0.735</CorrectionValue_60_Percent>
+    <CorrectionValue_70_Percent>0.674</CorrectionValue_70_Percent>
+    <CorrectionValue_80_Percent>0.602</CorrectionValue_80_Percent>
+    <CorrectionValue_90_Percent>0.52</CorrectionValue_90_Percent>
+    <CorrectionValue_100_Percent>0.425</CorrectionValue_100_Percent>
+  </FlowSensorSolventCalibration>
+</PumpMethod>
