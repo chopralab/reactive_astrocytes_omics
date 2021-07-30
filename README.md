@@ -6,15 +6,15 @@ All the analyzed data can be accessed through the web app: http://gliaomics.com
 ## Raw Lipidomics Data Availability
 http://massive.ucsd.edu/ProteoSAFe/status.jsp?task=ca311727ff524e32868736d3d1b3cc0a
 * MassIVE MSV000087832
-* Number of Files:67,917
-* Total Size:3.10 GB
+* Number of Files:33,959
+* Total Size:1.56 GB
 * Subscribers:1
 
 ## Raw Proteomics Data Availability
 https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=5f39b6cde74c4911951dbef1f2dac443
 * MassIVE MSV000087805
-* Number of Files:6,304
-* Total Size:30.07 GB
+* Number of Files:36
+* Total Size:29.66 GB
 * Subscribers:1
 
 ## Requirements
