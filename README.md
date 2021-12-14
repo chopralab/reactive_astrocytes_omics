@@ -1,5 +1,5 @@
 # Reactive Astrocytes Omics
-This project contains all the omics data used and all the scripts which were developed to do the analysis, and figure making. Each of elovl-cko astrocytes lipidomics, reactive astrocytes lipidomics, and reactive astrocytes proteomics has a analysis.R scripts which will do the analysis for each of these sections. Separate scripts heat_maps.R and scatter_plots.R were provided to make heat maps and scatter plots figures.
+This project contains all the omics data used and all the scripts which were developed to do the analysis, and figure making for the  Nature 2021 paper (PMID: 34616039 DOI: 10.1038/s41586-021-03960-y). Each of elovl-cko astrocytes lipidomics, reactive astrocytes lipidomics, and reactive astrocytes proteomics has a analysis.R scripts which will do the analysis for each of these sections. Separate scripts heat_maps.R and scatter_plots.R were provided to make heat maps and scatter plots figures.
 
 All the analyzed data can be accessed through the web app: http://gliaomics.com
 
