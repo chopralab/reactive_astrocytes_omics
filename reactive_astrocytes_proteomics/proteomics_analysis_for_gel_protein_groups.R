@@ -230,11 +230,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
 
 
 ##############################################################################
-
-  
-  # BV2 Proteomics
-  
-  ## Load data
+## Load data
   
 library(plyr)
 library(tidyverse)
