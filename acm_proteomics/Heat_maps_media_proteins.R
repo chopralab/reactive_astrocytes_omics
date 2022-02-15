@@ -36,13 +36,6 @@ vals %>%
                      fontsize = 10, fontsize_row = 6)
 
 
-
-
-
-
-
-
-
 # make_heatmap_jf_e1 <- function(tp, design_mat, gr, contrasts, title = "Heat-map", FDR = 0.10, breaks, list1, list2) {
 # 
 #   tp %>%
