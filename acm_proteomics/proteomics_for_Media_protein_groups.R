@@ -229,11 +229,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
 
 
 ##############################################################################
-
-  
-  # BV2 Proteomics
-  
-  ## Load data
+## Load data
   
 library(plyr)
 library(tidyverse)
@@ -398,8 +394,6 @@ protein_groups_lfq %>%
   make_pca_plot(tp_edger = rownames(lrt_LFQ_1)[as.logical(lrt_LFQ_1)]) +
   ggtitle("At least 1 non-zero columns")
 
-
-
 #Make a table for the column 10 or more.
 
 table_LFQ_edgeR_10 <- (glmLRT(glmFit(LFQ_edgeR_10, design), contrast = contrasts) %>%
@@ -458,8 +452,6 @@ table_LFQ_edgeR_4 <- (glmLRT(glmFit(LFQ_edgeR_4, design), contrast = contrasts) 
   arrange(FDR)
 
 write.table(table_LFQ_edgeR_4 , file = "4x_full.csv", sep = ",", row.names = FALSE)
-
-
 
 #Make a table for the column 2 or more.
 
